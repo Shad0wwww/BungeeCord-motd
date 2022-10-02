@@ -5,7 +5,7 @@ import net.md_5.bungee.api.ServerPing;
 import net.md_5.bungee.api.event.ProxyPingEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
-import utils.Chat;
+import dk.shadow.utils.Chat;
 
 
 import java.util.UUID;
