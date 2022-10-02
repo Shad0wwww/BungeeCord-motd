@@ -9,8 +9,7 @@ public class Bungee extends Plugin {
 
     @Override
     public void onEnable() {
-        // You should not put an enable message in your plugin.
-        // BungeeCord already does so
+        bungee = this;
         getLogger().info("Yay! It loads!");
         this.getProxy().getPluginManager().registerListener(this, new PingListener(this.bungee));
 

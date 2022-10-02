@@ -30,13 +30,19 @@ public final class PingListener implements Listener {
 
         System.out.println("Players: " + players);
         players.setSample(new ServerPing.PlayerInfo[] {
-                new ServerPing.PlayerInfo(Chat.colored("&c&LCUTE&F&LKAT        "), UUID.randomUUID()),
-                new ServerPing.PlayerInfo(Chat.colored("&fStarten på Danmark værste server!"), UUID.randomUUID()),
-                new ServerPing.PlayerInfo(Chat.colored(" "), UUID.randomUUID()),
-                new ServerPing.PlayerInfo(Chat.colored("&c&LINFOR&f&LMATION: "), UUID.randomUUID()),
-                new ServerPing.PlayerInfo(Chat.colored("&8● &7Online ➥ &f" + players.getOnline()), UUID.randomUUID())
+                playerinfo("&c&LCUTE&F&LKAT        "),
+                playerinfo("&fStarten på Danmark værste server!"),
+                playerinfo(" "),
+                playerinfo("&c&LINFOR&f&LMATION: "),
+                playerinfo("&8● &7Online ➥ &f" + players.getOnline())
         });
         //response.setDescription("and a whole ton of randomt text here"); Det er motd på serveren
+
+
+    }
+    private static ServerPing.PlayerInfo playerinfo(String message) {
+        return new ServerPing.PlayerInfo(Chat.colored(message), UUID.randomUUID());
+
 
     }
 
