@@ -8,6 +8,10 @@ import net.md_5.bungee.event.EventHandler;
 import dk.shadow.utils.Chat;
 
 
+import java.io.ByteArrayOutputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.util.UUID;
 
 public final class PingListener implements Listener {
@@ -25,16 +29,18 @@ public final class PingListener implements Listener {
             return;
         }
 
+
         final ServerPing.Players players = response.getPlayers();
 
 
-        System.out.println("Players: " + players);
+        //System.out.println("Players: " + players);
         players.setSample(new ServerPing.PlayerInfo[] {
                 playerinfo("&c&LCUTE&F&LKAT        "),
-                playerinfo("&fStarten på Danmark værste server!"),
+                playerinfo("&fStarten på Danmarks værste server!"),
                 playerinfo(" "),
                 playerinfo("&c&LINFOR&f&LMATION: "),
                 playerinfo("&8● &7Online ➥ &f" + players.getOnline())
+
         });
         //response.setDescription("and a whole ton of randomt text here"); Det er motd på serveren
 
@@ -45,5 +51,6 @@ public final class PingListener implements Listener {
 
 
     }
+
 
 }
